@@ -1,0 +1,15 @@
+$TTL 86400
+@	IN SOA	ns1.example.com. root-dns.example.com. (
+					86	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+
+@	 IN	NS	server.example.com.
+server	 IN	A 	192.168.1.100
+client1  IN 	A	192.168.1.1
+client2  IN 	A	192.168.2.1
+c1	 IN 	CNAME  	client1.example.com.
+c2	IN 	CNAME	client2.example.com.
+s	IN	CNAME	server.example.com.
